@@ -12,7 +12,7 @@ Built together by Tori + Codex. Remaining account quota, a compact task navigati
 
 - [macOS Apple Silicon app](Codex-Meter-v1.5.1-macOS-arm64.zip) — the installed app snapshot.
 - [Complete source, app and artwork backup](Codex-Meter-v1.5.1-complete-backup.zip) — original folder structure, build scripts, tests, source credits and all previews.
-- [Git history bundle](Codex-Meter-v1.5.1-backup.bundle) — all local commits, branches and the `v1.5.1` tag; source commit `fd907c44b6a369642451a9efd2d382750641db40`.
+- [Git history bundle](Codex-Meter-v1.5.1-backup.bundle) — all local commits, branches and the `v1.5.1` / `v1.5.1-backup1` tags; source commit `08026b48e00b01ff00cf7722c748975c9119a7f8`.
 - [Version manifest](v1.5.1-manifest.json) · [SHA-256 checksums](SHA256SUMS-v1.5.1.txt) · [Full usage notes](SOURCE-README-v1.5.1.md).
 
 The GitHub archive commit and the source commit inside the bundle are separate histories. Use the source ZIP or bundle to build the app, rather than the root archive repository.
@@ -41,7 +41,7 @@ Restore the Git repository using:
 ```sh
 git clone Codex-Meter-v1.5.1-backup.bundle codex-meter-source
 cd codex-meter-source
-git checkout v1.5.1
+git checkout v1.5.1-backup1
 ```
 
 ## Seven matching scenes

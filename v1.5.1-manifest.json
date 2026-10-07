@@ -1,8 +1,8 @@
 {
   "version": "1.5.1",
   "build": "11",
-  "source_commit": "fd907c44b6a369642451a9efd2d382750641db40",
-  "created_at": "2026-10-07T16:38:56.960515+00:00",
+  "source_commit": "08026b48e00b01ff00cf7722c748975c9119a7f8",
+  "created_at": "2026-10-07T16:45:31.262712+00:00",
   "platform": "macOS 13+ / Apple Silicon (arm64)",
   "tests": {
     "bridge": 12,
@@ -20,14 +20,14 @@
     "build.sh": "bd439e0e052438c625705076b5afec0c56d264ebba23aa54d671983326134bc6",
     "dev/export-scenes.html": "92e174657c8ee1eb3c0dbe111a988ca85fca49223f4efaf608e79652438cfee5",
     "dev/pet-preview.html": "344598be07610888c2c5be12bd546ba25e59a51982e37c8a191e3968793aae0f",
-    "media/scene-cooking.png": "17ba34e7eb57e3b3077a01a763998c9c461b9b9d6b4a443c59f6a1699262a613",
-    "media/scene-done.png": "86a59198d82660748facc0298f7b2f4a35393121adb595dc6854a75e678c6ca2",
-    "media/scene-flight.png": "5e686107e657188d03a48bf3d22c37440d690b6377a891d1c7258c1702d52865",
-    "media/scene-music.png": "79abc76ad027dcf470ba19ee8b8486be6e9d019e8d0f98f77bef7106cf189a93",
-    "media/scene-overview.png": "97e37ad9d32efb0ba70af1ab746b920b2a078f4cb1af8d2a83173d9ac94d1a9c",
-    "media/scene-photo.png": "6111a16513cee5754fe659105205774cc31da26c0ba2c399d631edeb5d1fc7b8",
-    "media/scene-tennis.png": "f377dc11625a15a6a9cb7c2a18fa6c15afccd7dc04ab7e2945fdefca79721ca7",
-    "media/scene-typing.png": "7cd7259cf5bad23a8f385491525ee02325d3b56be0e013be2dfde585715a8cc4",
+    "media/scene-cooking.png": "3cf326a2fe7edee5684bcfd4cd080c44454aabce9731e9c773501c25205fa1e9",
+    "media/scene-done.png": "8583a386d670f3dc99d3fc63e8f4d44eca74d63e4076aacfbfeabf85f1eb30f9",
+    "media/scene-flight.png": "f5a97ea7705359fe20043b52a44a59d5e95713d90442f91f8874c31ce28fbe86",
+    "media/scene-music.png": "bccc2b417dcad9423a5fe93835d0d3a0a86eba78f4117b69b346860cfc61c2ab",
+    "media/scene-overview.png": "fb15a594d09c0f5f8001ebe82d4078bcd99d0928a75804f4567ee709f316a815",
+    "media/scene-photo.png": "1211efc5539aed54cad50197d99a93c51512bcd5a9da612347177c0fb6b3333d",
+    "media/scene-tennis.png": "ba10ba63c6a440859029ec8506a588558eab3bb7cb8f0eaf4f8446308997852f",
+    "media/scene-typing.png": "6951e4c74db1f138431432a035000eef161e8f6dca4c53ccc7754178736ee32c",
     "release/LAUNCH-DRAFT.md": "177e943fae80341593911436e8759a83b6bf8be24a9a03d0b68521f56cf39dcb",
     "test_bridge.py": "44dc64bd74feaa0906bbc74f9e4688c23944b3f7752d22ae84a8b7e4acd727b4",
     "test_pet.cjs": "a779539e3c47b19ef578185965f66fe28bf4b13419900f9246a5c46cc32ed454",
@@ -52,5 +52,6 @@
     "scene-photo.png",
     "scene-tennis.png",
     "scene-typing.png"
-  ]
+  ],
+  "restore_tag": "v1.5.1-backup1"
 }

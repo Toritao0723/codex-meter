@@ -56,8 +56,8 @@ node --test test_task_nav.cjs test_pet.cjs
 
 ## 场景预览与介绍素材
 
-![Seven scenes with consistent character landscapes](media/scene-overview.png)
+![Seven scenes with consistent character landscapes](scene-overview.png)
 
-[七张独立缩略图](media/) · [视频分镜和中英文 X 文案草稿](release/LAUNCH-DRAFT.md)
+七张独立缩略图见本仓库的 scene-*.png · [视频分镜和中英文 X 文案草稿](LAUNCH-DRAFT.md)
 
 当前已接入 Codex，其他 agent 尚未适配。
