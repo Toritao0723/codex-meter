@@ -1,41 +1,75 @@
-# Codex Meter · v1.3.0 私有备份
+# Codex Meter 🦀
 
-当前桌面安装版本的完整快照：**1.3.0 / build 6**，macOS Apple Silicon。备份创建于 2026-10-08（Asia/Hong_Kong）。
+A little desktop companion for your agents — starting with **Codex on macOS**.
 
-功能包括原生磨砂玻璃界面、Codex 实际账户额度、紧凑的小螃蟹动作、右对齐的独立任务通知列表、明确的待回复提醒。权限审批弹窗目前不能可靠检测，具体限制记录在完整源码包的 README 中。
+Built together by Tori + Codex. Remaining account quota, a compact task navigation bar, seven pixel scenes, and one consistent character-landscape style powered by [Tori Patterns](https://patterns.toritao.com/#/photo).
 
-## 备份文件
+![Seven scenes, one companion](scene-overview.png)
 
-- [完整源码与应用备份](Codex-Meter-v1.3.0-complete-backup.zip)：保持目录结构的源码、构建脚本、测试、原作说明和应用包，共 17 个文件。
-- [直接恢复 macOS 应用](Codex-Meter-v1.3.0-macOS-arm64.zip)：备份时已安装的 `Codex Meter.app`。
-- [Git 版本历史](Codex-Meter-v1.3.0-backup.bundle)：本地仓库与 `v1.3.0` 标签，源码提交 `32d2f858e13e98865fdb83985744b2fcc5361eff`。
-- [版本与源码校验清单](v1.3.0-manifest.json) 和 [下载文件校验值](SHA256SUMS.txt)。
+**Latest backup: v1.5.1 / build 11 · 2026-10-08 · macOS Apple Silicon.** This is a private archive repository. The current application supports Codex; other agents are a future direction. No public launch or X post has been made.
 
-此仓库以可恢复的归档文件保存原始目录和 Git 历史；GitHub 上的归档提交与包内源码提交分别保存。
+## Download / restore
 
-## 恢复
+- [macOS Apple Silicon app](Codex-Meter-v1.5.1-macOS-arm64.zip) — the installed app snapshot.
+- [Complete source, app and artwork backup](Codex-Meter-v1.5.1-complete-backup.zip) — original folder structure, build scripts, tests, source credits and all previews.
+- [Git history bundle](Codex-Meter-v1.5.1-backup.bundle) — all local commits, branches and the `v1.5.1` tag; source commit `fd907c44b6a369642451a9efd2d382750641db40`.
+- [Version manifest](v1.5.1-manifest.json) · [SHA-256 checksums](SHA256SUMS-v1.5.1.txt) · [Full usage notes](SOURCE-README-v1.5.1.md).
 
-直接使用：退出正在运行的 Codex Meter，解压 macOS 应用包，将 `Codex Meter.app` 放回 `~/Applications/`。本地临时签名可能需要在新机器重新构建。
+The GitHub archive commit and the source commit inside the bundle are separate histories. Use the source ZIP or bundle to build the app, rather than the root archive repository.
 
-恢复源码：下载并解压完整备份，进入 `Codex-Meter-v1.3.0` 目录。构建前需要 Apple Command Line Tools，运行：
+### Existing Mac installation
+
+Quit Codex Meter, unzip the app archive, and place `Codex Meter.app` in `~/Applications/`. Open it after signing in to the official Codex app on that Mac. macOS 13+, Apple Silicon and Apple Command Line Tools / Python 3 are required. The app uses local ad-hoc signing and is not Apple-notarized; new machines may need to build it locally. Intel is not verified.
+
+### Build from source
+
+Unzip the complete backup and enter `Codex-Meter-v1.5.1`. Install Apple Command Line Tools if needed, then run:
 
 ```sh
+xcode-select --install  # only if Command Line Tools are not already installed
 python3 -m unittest -v test_bridge.py
 ./build.sh
+mkdir -p "$HOME/Applications"
+ditto --norsrc --noextattr "/private/tmp/codex-meter-build/Codex Meter.app" "$HOME/Applications/Codex Meter.app"
+open "$HOME/Applications/Codex Meter.app"
 ```
 
-构建结果在 `/private/tmp/codex-meter-build/Codex Meter.app`。首次使用需在本机 Codex 登录；备份不含登录凭据。
+JavaScript checks, if Node.js is installed: `node --test test_task_nav.cjs test_pet.cjs`.
 
-恢复 Git 仓库：下载 `.bundle` 文件后运行：
+Restore the Git repository using:
 
 ```sh
-git clone Codex-Meter-v1.3.0-backup.bundle codex-meter-source
+git clone Codex-Meter-v1.5.1-backup.bundle codex-meter-source
 cd codex-meter-source
-git checkout v1.3.0
+git checkout v1.5.1
 ```
 
-## 来源与隐私
+## Seven matching scenes
 
-基于 [Bon Yeung 的 Claude-Meter](https://github.com/bonyuiux/Claude-Meter)，原始版本 `0e6d7a05cec6e420f2c24164296a82d34096d1d3`。原版界面与像素角色 © 2026 Bon Yeung；完整署名与原版说明保留在 [UPSTREAM.md](UPSTREAM.md)。本项目为个人 Codex 适配备份，非 OpenAI 或 Anthropic 官方产品。
+| Deep work | Cooking ideas | In the flow |
+|---|---|---|
+| ![Typing in a forest](scene-typing.png) | ![Cooking in warm hills](scene-cooking.png) | ![Tennis on green slopes](scene-tennis.png) |
 
-未包含 API key、登录凭据、使用量缓存、Codex 任务日志或个人应用偏好。
+| A new perspective | Above the clouds | Take your time |
+|---|---|---|
+| ![Photography in the dunes](scene-photo.png) | ![Flying through character mountains](scene-flight.png) | ![Waiting at a moonlit lake](scene-music.png) |
+
+[![Celebrate a finished turn](scene-done.png)](scene-done.png)
+
+All eight PNGs are 1280 × 720. They contain artwork only, with no personal task titles or account usage. [Video outline and Chinese / English X post drafts](LAUNCH-DRAFT.md) are ready for the next editing session.
+
+## What it does today
+
+- Reads real Codex account quota windows and reset times; quota percentage is not an API balance or a remaining-token count.
+- Shows one selected task at a time, with arrows for navigation and reply-needed prompts.
+- Five working activities, music while waiting, confetti when a turn finishes.
+- Full, compact and pet-only modes; native macOS glass with light / dark appearance.
+- Reads local state and the official read-only quota endpoint. Monitoring and cached scenery do not call a model.
+
+Completion means the current response turn ended, not that the whole project is finished. Permission approval popups cannot all be detected reliably. Only recent, unarchived tasks with local logs on this Mac are covered. Other agents are not integrated yet.
+
+## Credits and earlier backup
+
+Based on [Bon Yeung’s Claude-Meter](https://github.com/bonyuiux/Claude-Meter). Original UI and pixel character © 2026 Bon Yeung; original documentation and attribution remain in [UPSTREAM.md](UPSTREAM.md) and source comments. Character landscapes adapt [Tori Patterns Photo Lab](https://patterns.toritao.com/#/photo), with visual inspiration from [Claude FM](https://www.youtube.com/watch?v=tRsQsTMvPNg). Unofficial, not an OpenAI or Anthropic product.
+
+The [v1.3.0 complete backup](Codex-Meter-v1.3.0-complete-backup.zip), [app](Codex-Meter-v1.3.0-macOS-arm64.zip) and [bundle](Codex-Meter-v1.3.0-backup.bundle) remain available. Backups exclude API keys, login credentials, task logs, usage caches and personal app preferences.
