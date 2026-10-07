@@ -1,0 +1,25 @@
+{
+  "version": "1.3.0",
+  "build": "6",
+  "created_at": "2026-10-07T15:57:32.611665+00:00",
+  "upstream": "https://github.com/bonyuiux/Claude-Meter",
+  "upstream_commit": "0e6d7a05cec6e420f2c24164296a82d34096d1d3",
+  "source_sha256": {
+    ".gitignore": "bb9118b9510b1181e8cdaf8c893e8e11a81c6422fe8049798a110b83f7f93f0a",
+    "Meter.swift": "1037e9c2d25159942c96dea394a1619118f6cf40e45a5daa65365a29950563be",
+    "README.md": "07482cf66c6afde0d6e550e949d436827c95db92b7c40edeb765dae873438ce3",
+    "UPSTREAM.md": "6e22cfc14fff11d0ce51d55f1b491105e7aa9c60330b0fcbf666d38164fe8236",
+    "bridge.py": "7476acb01642e8257129f791bb410e9e63ae388d81329e32c3983f33f2e2d976",
+    "build.sh": "f5bd276866fb5d81f4d4f69ae7204c62679420aef52e968e3577c9b20f8ba131",
+    "dev/pet-preview.html": "3acd6d70cc284c7b6806e119004ec3506165ca5fc779878a77d17490cec97f53",
+    "test_bridge.py": "44dc64bd74feaa0906bbc74f9e4688c23944b3f7752d22ae84a8b7e4acd727b4",
+    "ui/bubble.html": "54558f3adcf49cb7aed057f373dccfc37ec97dd26a396cb5c70d3f87d8c24797",
+    "ui/bubble.js": "1f44412ed7a7fe573447d2c075a1a4933667c9e4fb689486f021950d5a08a9c6",
+    "ui/index.html": "e5a82860e9795dea10b2988c48c9485164b442dc67cc953dfe131e70a240052f",
+    "ui/meter.css": "a2ecc2479fe40536dd353d80f38f0b460b1eb205359936119d7d0febd4f3e9e8",
+    "ui/meter.js": "23e82c8b18f1b414298a76323e967c74646b399784a36b393223e15399957dec",
+    "ui/pet.js": "a9ad2587fbac67ecf78522bae29f14ba09bc55a7e472ef34f368f4dd64168c19"
+  },
+  "app_archive": "Codex-Meter-v1.3.0-macOS-arm64.zip",
+  "app_archive_sha256": "011eea02519cd760f7bf62763856032627f966218a8a15c1a0409280d2856deb"
+}
