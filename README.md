@@ -1,12 +1,32 @@
 # Codex Meter 🦀
 
-A little desktop companion for your agents — starting with **Codex on macOS**.
+A little desktop companion for your agents — **Codex** and now **Claude** on macOS.
 
 Built together by Tori + Codex. Remaining account quota, a compact task navigation bar, seven pixel scenes, and one consistent character-landscape style powered by [Tori Patterns](https://patterns.toritao.com/#/photo).
 
 ![Seven scenes, one companion](scene-overview.png)
 
 **Latest backup: v1.5.1 / build 11 · 2026-10-08 · macOS Apple Silicon.** This is a private archive repository. The current application supports Codex; other agents are a future direction. No public launch or X post has been made.
+
+## Claude Meter v1.6.0 — for Claude (2026-10-08)
+
+**This version is for Claude, not Codex.** Same companion and scenes, but the meter shows your **remaining Claude quota** (the numbers on Claude's Usage page) and tracks **Claude Code sessions**.
+
+- **Live Claude quota:** 5-hour and weekly limits (plus weekly Opus / Sonnet when your plan has them), remaining %, and reset countdowns, refreshed every 60 s from Anthropic's official read-only usage endpoint. Verified working on 2026-10-08.
+- **Task bar:** recent Claude Code sessions on this Mac (last 3 days) with working / done states, finish notifications and context fill.
+- **Sign-in:** uses Claude Code's own login on this Mac, read locally from the macOS Keychain; it is sent only to `api.anthropic.com`. No model requests.
+
+Downloads: [macOS Apple Silicon app](Claude-Meter-v1.6.0-macOS-arm64.zip) · [Complete source](Claude-Meter-v1.6.0-complete-source.zip) · [Manifest](claude-v1.6.0-manifest.json) · [SHA-256 checksums](SHA256SUMS-claude-v1.6.0.txt)
+
+### Setup
+
+1. Sign in Claude Code once: `claude auth login` (approve in the browser, paste the code back if asked).
+2. Unzip the app to `~/Applications/Claude Meter.app` and open it. If macOS asks about the "Claude Code-credentials" keychain item, choose **Always Allow**.
+3. **Region:** Anthropic rejects requests from unsupported regions such as Hong Kong (sign-in fails with 403, the meter shows a sync error). Use a proxy node in a supported region (e.g. Japan). The meter follows the macOS system proxy.
+
+Build from source: unzip the source, `cd Claude-Meter-v1.6.0 && ./build.sh`, then copy `/private/tmp/claude-meter-build/Claude Meter.app` to `~/Applications/`.
+
+The Codex version below (v1.5.1) is unchanged.
 
 ## Download / restore
 
