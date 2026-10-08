@@ -1,40 +1,16 @@
-# Claude Meter / Codex Meter 🦀
+# Codex Meter 🦀
 
-A little desktop companion for your agents on macOS — now for **Claude** (v1.6.0), and **Codex** (v1.5.2).
+A little macOS desktop companion for Codex: see your remaining account quota, follow local tasks, and keep a pixel crab beside your work.
 
-Built by Tori with Codex and Claude. Remaining account quota, a compact task navigation bar, seven pixel scenes, and one consistent character-landscape style powered by [Tori Patterns](https://patterns.toritao.com/#/photo).
+Built by [Tori Tao](https://toritao.com/#ai-apps) with Codex and Claude. Seven pixel scenes share a character-landscape style powered by [Tori Patterns](https://patterns.toritao.com/#/photo).
+
+**Latest: Codex Meter v1.5.2 / build 12 · macOS 13+ · Apple Silicon.**
+
+[Download Codex Meter](https://github.com/Toritao0723/codex-meter/raw/refs/heads/main/Codex-Meter-v1.5.2-macOS-arm64.zip) · [Installation and usage notes](SOURCE-README-v1.5.2.md) · [Tori's portfolio](https://toritao.com/)
+
+Looking for the Claude version? Visit [Claude Meter](https://github.com/Toritao0723/claude-meter).
 
 ![Seven scenes, one companion](scene-overview.png)
-
-**Latest: Claude Meter v1.6.0 / build 12 · 2026-10-08 · macOS Apple Silicon.** Shows your remaining Claude quota live, follows your Claude Code sessions, and switches between 中文 and English.
-
-## Claude Meter v1.6.0 — for Claude (2026-10-08)
-
-| Full panel | Compact |
-|---|---|
-| ![Claude Meter full panel](claude-meter-en.png) | ![Claude Meter compact](claude-meter-compact-en.png) |
-
-中文界面: [claude-meter-zh.png](claude-meter-zh.png)
-
-**This version is for Claude, not Codex.** Same companion and scenes, but the meter shows your **remaining Claude quota** (the numbers on Claude's Usage page) and tracks **Claude Code sessions**.
-
-- **Live Claude quota:** 5-hour and weekly limits (plus weekly Opus / Sonnet when your plan has them), remaining %, and reset countdowns, refreshed every 60 s from Anthropic's official read-only usage endpoint. Verified working on 2026-10-08.
-- **Layout:** the big remaining % and its label share one left edge; in compact mode the left and right text columns share the same top and bottom lines.
-- **中文 / English:** click the **EN / 中** button in the full panel header (or right-click → Switch to English). The choice is remembered and also applies to the menu, notifications and About box.
-- **Task bar:** recent Claude Code sessions on this Mac (last 3 days) with working / done states, finish notifications and context fill.
-- **Sign-in:** uses Claude Code's own login on this Mac, read locally from the macOS Keychain; it is sent only to `api.anthropic.com`. No model requests.
-
-Downloads: [macOS Apple Silicon app](Claude-Meter-v1.6.0-macOS-arm64.zip) · [Complete source](Claude-Meter-v1.6.0-complete-source.zip) · [Manifest](claude-v1.6.0-manifest.json) · [SHA-256 checksums](SHA256SUMS-claude-v1.6.0.txt)
-
-### Setup
-
-1. Sign in Claude Code once: `claude auth login` (approve in the browser, paste the code back if asked).
-2. Unzip the app to `~/Applications/Claude Meter.app` and open it. It is ad-hoc signed, not Apple-notarized: the first time, right-click the app → **Open** → **Open**, or run `xattr -dr com.apple.quarantine "$HOME/Applications/Claude Meter.app"`. If it still won't start, build from source (below). If macOS asks about the "Claude Code-credentials" keychain item, choose **Always Allow**.
-3. **Region:** Anthropic rejects requests from unsupported regions such as Hong Kong (sign-in fails with 403, the meter shows a sync error). Use a proxy node in a supported region (e.g. Japan). The meter follows the macOS system proxy.
-
-Build from source: unzip the source, `cd Claude-Meter-v1.6.0 && ./build.sh`, then copy `/private/tmp/claude-meter-build/Claude Meter.app` to `~/Applications/`.
-
-The Codex version below is updated to v1.5.2 / build 12. This repository is currently private.
 
 ## Codex Meter v1.5.2 — download / restore
 
@@ -100,7 +76,7 @@ All eight PNGs are 1280 × 720. They contain artwork only, with no personal task
 - Full, compact and pet-only modes; native macOS glass with light / dark appearance.
 - Reads local state and the official read-only quota endpoint. Monitoring and cached scenery do not call a model.
 
-Completion means the current response turn ended, not that the whole project is finished. Permission approval popups cannot all be detected reliably. Only recent, unarchived tasks with local logs on this Mac are covered. The Codex app monitors Codex; the separate Claude app is described above.
+Completion means the current response turn ended, not that the whole project is finished. Permission approval popups cannot all be detected reliably. Only recent, unarchived tasks with local logs on this Mac are covered. The Codex app monitors Codex; the separate [Claude app has its own public repository](https://github.com/Toritao0723/claude-meter).
 
 ## Credits and earlier backup
 
