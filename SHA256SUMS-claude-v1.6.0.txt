@@ -1,5 +1,5 @@
-ec14b90becf20d7b9d304dfad600c71ca0dee396ed2ede701c7dd8df2bc7e5b7  Claude-Meter-v1.6.0-complete-source.zip
-ab2ac50ce8b1951a5af0ee591642280a10f3c00fbaec326d4fec730d79e6a96b  Claude-Meter-v1.6.0-macOS-arm64.zip
+50286d9590205925402909726bd7c00792eeaa85448425650a268f8ffd02e385  Claude-Meter-v1.6.0-complete-source.zip
+fd51e03df502e3754158c35235d457c1037172388f4c6a49aec3fbb2708c1b68  Claude-Meter-v1.6.0-macOS-arm64.zip
 70a4cfa93d800f188004b2e02e989f945f2f625645567ba212ffed36955f0066  claude-meter-compact-en.png
 59d0ce5a77ccf40bcd3008fb7b49fffcecfa15e22064e4953fbb4d3bae0eb74e  claude-meter-en.png
 2ecf0ecf469953b78e412bc816ce3cfc5d64bf383d9ab94994bdf6b707436154  claude-meter-zh.png
