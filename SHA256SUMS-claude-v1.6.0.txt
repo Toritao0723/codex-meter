@@ -1,2 +1,2 @@
-faa7fffd37b3ca0f9a36b27ee8d464b981b8d59b0dfa69370a1355e57865c01a  Claude-Meter-v1.6.0-complete-source.zip
-62002b8e4d246de74b0f9cdd701c0e41853d291d4331789a8afc16240651c97d  Claude-Meter-v1.6.0-macOS-arm64.zip
+b2715ebd566f37394ce56cbe0d7d0ce6c0ec26d2ad165b62d695e30cd0033198  Claude-Meter-v1.6.0-complete-source.zip
+bfd7df1f2fe6192799341f640328ce70010e76f0c47f94611c65362a0b3c80b1  Claude-Meter-v1.6.0-macOS-arm64.zip
