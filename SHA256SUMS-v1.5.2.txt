@@ -1,0 +1,5 @@
+e18fe422ced0351529104dc9573561e717f0511335ae00c01fd39c8f712f2aca  Codex-Meter-v1.5.2-backup.bundle
+ab4246eaed01499ca713c60ffa0b0f12206f38b4a79b1ee5852cdde0d7f4718f  Codex-Meter-v1.5.2-complete-backup.zip
+4d58be5c9d86d39f795231390e1cb4ef178b9a5533ea64b6c193937ecfe06430  Codex-Meter-v1.5.2-macOS-arm64.zip
+6afe0abbe68dfdf467e6071ec712151495b3fb002c58033e0b29484466418d24  SOURCE-README-v1.5.2.md
+07d08b3a382d98188ae59d7c1dbc07eab5c4e83b5ae06261510df2b4077599bb  v1.5.2-manifest.json

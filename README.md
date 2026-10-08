@@ -1,6 +1,6 @@
 # Claude Meter / Codex Meter 🦀
 
-A little desktop companion for your agents on macOS — now for **Claude** (v1.6.0), with the original **Codex** version (v1.5.1) kept below.
+A little desktop companion for your agents on macOS — now for **Claude** (v1.6.0), and **Codex** (v1.5.2).
 
 Built by Tori with Codex and Claude. Remaining account quota, a compact task navigation bar, seven pixel scenes, and one consistent character-landscape style powered by [Tori Patterns](https://patterns.toritao.com/#/photo).
 
@@ -34,14 +34,14 @@ Downloads: [macOS Apple Silicon app](Claude-Meter-v1.6.0-macOS-arm64.zip) · [Co
 
 Build from source: unzip the source, `cd Claude-Meter-v1.6.0 && ./build.sh`, then copy `/private/tmp/claude-meter-build/Claude Meter.app` to `~/Applications/`.
 
-The Codex version below (v1.5.1) is unchanged.
+The Codex version below is updated to v1.5.2 / build 12. This repository is currently private.
 
-## Download / restore
+## Codex Meter v1.5.2 — download / restore
 
-- [macOS Apple Silicon app](Codex-Meter-v1.5.1-macOS-arm64.zip) — the installed app snapshot.
-- [Complete source, app and artwork backup](Codex-Meter-v1.5.1-complete-backup.zip) — original folder structure, build scripts, tests, source credits and all previews.
-- [Git history bundle](Codex-Meter-v1.5.1-backup.bundle) — all local commits, branches and the `v1.5.1` / `v1.5.1-backup1` tags; source commit `08026b48e00b01ff00cf7722c748975c9119a7f8`.
-- [Version manifest](v1.5.1-manifest.json) · [SHA-256 checksums](SHA256SUMS-v1.5.1.txt) · [Full usage notes](SOURCE-README-v1.5.1.md).
+- [macOS Apple Silicon app](Codex-Meter-v1.5.2-macOS-arm64.zip) — the installed app snapshot.
+- [Complete source, app and artwork backup](Codex-Meter-v1.5.2-complete-backup.zip) — original folder structure, build scripts, tests, source credits and all previews.
+- [Git history bundle](Codex-Meter-v1.5.2-backup.bundle) — all local commits, branches and the `v1.5.2` tag; source commit `de97283f2f120a075fd085eeb87eb64ba035ebe1`.
+- [Version manifest](v1.5.2-manifest.json) · [SHA-256 checksums](SHA256SUMS-v1.5.2.txt) · [Full usage notes](SOURCE-README-v1.5.2.md).
 
 The GitHub archive commit and the source commit inside the bundle are separate histories. Use the source ZIP or bundle to build the app, rather than the root archive repository.
 
@@ -51,7 +51,7 @@ Quit Codex Meter, unzip the app archive, and place `Codex Meter.app` in `~/Appli
 
 ### Build from source
 
-Unzip the complete backup and enter `Codex-Meter-v1.5.1`. Install Apple Command Line Tools if needed, then run:
+Unzip the complete backup and enter `Codex-Meter-v1.5.2`. Install Apple Command Line Tools if needed, then run:
 
 ```sh
 xcode-select --install  # only if Command Line Tools are not already installed
@@ -62,15 +62,21 @@ ditto --norsrc --noextattr "/private/tmp/codex-meter-build/Codex Meter.app" "$HO
 open "$HOME/Applications/Codex Meter.app"
 ```
 
-JavaScript checks, if Node.js is installed: `node --test test_task_nav.cjs test_pet.cjs`.
+JavaScript checks, if Node.js is installed: `node --test test_task_nav.cjs test_pet.cjs test_language.cjs`.
 
 Restore the Git repository using:
 
 ```sh
-git clone Codex-Meter-v1.5.1-backup.bundle codex-meter-source
+git clone Codex-Meter-v1.5.2-backup.bundle codex-meter-source
 cd codex-meter-source
-git checkout v1.5.1-backup1
+git checkout v1.5.2
 ```
+
+## New in v1.5.2
+
+White `codex` identity in all sizes, aligned compact-panel labels, improved artwork spacing, and a persistent Chinese / English panel toggle beside Refresh in the full panel. Native menus and notifications remain Chinese. The scene artwork previews below were created for v1.5.1 and remain unchanged.
+
+Previous v1.5.1 archives and checksums are retained.
 
 ## Seven matching scenes
 
@@ -86,7 +92,7 @@ git checkout v1.5.1-backup1
 
 All eight PNGs are 1280 × 720. They contain artwork only, with no personal task titles or account usage. [Video outline and Chinese / English X post drafts](LAUNCH-DRAFT.md) are ready for the next editing session.
 
-## What it does today
+## What the Codex version does today
 
 - Reads real Codex account quota windows and reset times; quota percentage is not an API balance or a remaining-token count.
 - Shows one selected task at a time, with arrows for navigation and reply-needed prompts.
@@ -94,7 +100,7 @@ All eight PNGs are 1280 × 720. They contain artwork only, with no personal task
 - Full, compact and pet-only modes; native macOS glass with light / dark appearance.
 - Reads local state and the official read-only quota endpoint. Monitoring and cached scenery do not call a model.
 
-Completion means the current response turn ended, not that the whole project is finished. Permission approval popups cannot all be detected reliably. Only recent, unarchived tasks with local logs on this Mac are covered. Other agents are not integrated yet.
+Completion means the current response turn ended, not that the whole project is finished. Permission approval popups cannot all be detected reliably. Only recent, unarchived tasks with local logs on this Mac are covered. The Codex app monitors Codex; the separate Claude app is described above.
 
 ## Credits and earlier backup
 
