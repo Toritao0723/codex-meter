@@ -1,14 +1,20 @@
-# Codex Meter 🦀
+# Claude Meter / Codex Meter 🦀
 
-A little desktop companion for your agents — **Codex** and now **Claude** on macOS.
+A little desktop companion for your agents on macOS — now for **Claude** (v1.6.0), with the original **Codex** version (v1.5.1) kept below.
 
-Built together by Tori + Codex. Remaining account quota, a compact task navigation bar, seven pixel scenes, and one consistent character-landscape style powered by [Tori Patterns](https://patterns.toritao.com/#/photo).
+Built by Tori with Codex and Claude. Remaining account quota, a compact task navigation bar, seven pixel scenes, and one consistent character-landscape style powered by [Tori Patterns](https://patterns.toritao.com/#/photo).
 
 ![Seven scenes, one companion](scene-overview.png)
 
-**Latest backup: v1.5.1 / build 11 · 2026-10-08 · macOS Apple Silicon.** This is a private archive repository. The current application supports Codex; other agents are a future direction. No public launch or X post has been made.
+**Latest: Claude Meter v1.6.0 / build 12 · 2026-10-08 · macOS Apple Silicon.** Shows your remaining Claude quota live, follows your Claude Code sessions, and switches between 中文 and English.
 
 ## Claude Meter v1.6.0 — for Claude (2026-10-08)
+
+| Full panel | Compact |
+|---|---|
+| ![Claude Meter full panel](claude-meter-en.png) | ![Claude Meter compact](claude-meter-compact-en.png) |
+
+中文界面: [claude-meter-zh.png](claude-meter-zh.png)
 
 **This version is for Claude, not Codex.** Same companion and scenes, but the meter shows your **remaining Claude quota** (the numbers on Claude's Usage page) and tracks **Claude Code sessions**.
 
@@ -23,7 +29,7 @@ Downloads: [macOS Apple Silicon app](Claude-Meter-v1.6.0-macOS-arm64.zip) · [Co
 ### Setup
 
 1. Sign in Claude Code once: `claude auth login` (approve in the browser, paste the code back if asked).
-2. Unzip the app to `~/Applications/Claude Meter.app` and open it. If macOS asks about the "Claude Code-credentials" keychain item, choose **Always Allow**.
+2. Unzip the app to `~/Applications/Claude Meter.app` and open it. It is ad-hoc signed, not Apple-notarized: the first time, right-click the app → **Open** → **Open**, or run `xattr -dr com.apple.quarantine "$HOME/Applications/Claude Meter.app"`. If it still won't start, build from source (below). If macOS asks about the "Claude Code-credentials" keychain item, choose **Always Allow**.
 3. **Region:** Anthropic rejects requests from unsupported regions such as Hong Kong (sign-in fails with 403, the meter shows a sync error). Use a proxy node in a supported region (e.g. Japan). The meter follows the macOS system proxy.
 
 Build from source: unzip the source, `cd Claude-Meter-v1.6.0 && ./build.sh`, then copy `/private/tmp/claude-meter-build/Claude Meter.app` to `~/Applications/`.
