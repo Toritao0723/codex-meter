@@ -13,7 +13,7 @@ Built together by Tori + Codex. Remaining account quota, a compact task navigati
 **This version is for Claude, not Codex.** Same companion and scenes, but the meter shows your **remaining Claude quota** (the numbers on Claude's Usage page) and tracks **Claude Code sessions**.
 
 - **Live Claude quota:** 5-hour and weekly limits (plus weekly Opus / Sonnet when your plan has them), remaining %, and reset countdowns, refreshed every 60 s from Anthropic's official read-only usage endpoint. Verified working on 2026-10-08.
-- **Compact mode:** left and right text columns share the same top and bottom lines.
+- **Layout:** the big remaining % and its label share one left edge; in compact mode the left and right text columns share the same top and bottom lines.
 - **中文 / English:** click the **EN / 中** button in the full panel header (or right-click → Switch to English). The choice is remembered and also applies to the menu, notifications and About box.
 - **Task bar:** recent Claude Code sessions on this Mac (last 3 days) with working / done states, finish notifications and context fill.
 - **Sign-in:** uses Claude Code's own login on this Mac, read locally from the macOS Keychain; it is sent only to `api.anthropic.com`. No model requests.
