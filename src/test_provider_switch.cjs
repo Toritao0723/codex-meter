@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const buttons=[0,1].map(()=>({events:{},attrs:{},addEventListener(k,f){this.events[k]=f},setAttribute(k,v){this.attrs[k]=v}})),sent=[],sticker={};
+const window={webkit:{messageHandlers:{meter:{postMessage:m=>sent.push(m)}}}};
+const document={documentElement:{dataset:{provider:'codex'}},querySelectorAll:()=>buttons,querySelector:()=>sticker};
+vm.runInNewContext(fs.readFileSync(__dirname+'/ui/provider-switch.js','utf8'),{window,document});
+const click=()=>buttons[0].events.click({stopPropagation(){}});
+window.updateProviderSwitch({provider:'codex',providers:['codex']});
+assert.equal(buttons[0].textContent,'Codex');assert.equal(buttons[0].disabled,true);click();assert.equal(sent.length,0);
+window.updateProviderSwitch({provider:'codex',providers:['codex','claude']});
+assert.equal(buttons[0].disabled,false);assert.equal(buttons[0].attrs['aria-label'],'切换到 Claude');click();assert.equal(sent.at(-1).value,'claude');
+window.updateProviderSwitch({provider:'claude',providers:['codex','claude'],lang:'en'});
+assert.equal(buttons[1].attrs['aria-label'],'Switch to Codex');assert.equal(sticker.textContent,'CLAUDE');click();assert.equal(sent.at(-1).value,'codex');
+window.updateProviderSwitch({provider:'claude',providers:['claude']});
+assert.equal(buttons[0].textContent,'Claude');assert.equal(buttons[0].disabled,true);assert.equal(document.title,'Claude Meter');
+console.log('PASS: single-source label, two-source switch, correct target, language, return to one source');
